@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Data Entry Form</h1>
+      </div>
+    </div>
+  </section>
+
+  <form id="form" class="container m-4 pl-4" method="POST">
+    <div class="container-fluid">
+      <!-- Name -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="field">
+            <label class="label">First Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Your First Name" name="First_Name" />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="field">
+            <label class="label">Last Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Your Last Name" name="Last_Name" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact -->
+      <div class="row">
+        <div class="col">
+          <div class="field">
+            <label class="label">Contact Details</label>
+            <div class="control">
+              <input class="input" type="tel" placeholder="Mobile Number" name="Contact_No" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Location -->
+      <div class="row">
+        <div class="col">
+          <div class="field">
+            <label class="label">Ground</label>
+            <select name="Location" id="loc">
+              <option value="select">Select the Ground</option>
+              <option value="one-turf">1 Turf</option>
+              <option value="battlefield-sindhubhavan">Battlefield Sindhubhavan</option>
+              <option value="chase-the-game">Chase The Game</option>
+              <option value="city-box-cafe">City Box Cafe</option>
+              <option value="colosseum">Colosseum</option>
+              <option value="cric-boxx">Cric Boxx</option>
+              <option value="Dugout">DugOut</option>
+              <option value="Fireball">Fire-Ball</option>
+              <option value="Gally-box-cricket">Gally Box Cricket</option>
+              <option value="Googly-box-cricket">Googly Box Cricket</option>
+              <option value="Green-Galaxy-Arena">Green Galaxy Arena</option>
+              <option value="juggernaut">Juggernaut</option>
+              <option value="Offside-arena">Offside Arena</option>
+              <option value="Onyx-box-cricket">Onyx Box Cricket</option>
+              <option value="over-the-wicket">Over The Wicket</option>
+              <option value="Rh-Kapadia">RH Kapadia</option>
+              <option value="seven11">Seven11 Sports & Cafe</option>
+              <option value="skye turf">Skye Turf</option>
+              <option value="sprint-recreation">Sprint Recreation</option>
+              <option value="ss-arena">SS Arena</option>
+              <option value="Stallions">Stallions</option>
+              <option value="super-striker-turf">Super Striker Turf</option>
+              <option value="Trophy-fighters">Trophy Fighters</option>
+              <option value="Turf-ahmedabad">Turf Ahmedabad</option>
+              <option value="vista-arena">Vista Arena</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Date of playing -->
+      <div class="row">
+        <div class="col">
+          <div class="field">
+            <label class="label">Date of Booking</label>
+            <div class="control">
+              <input class="input" type="date" placeholder="Date" name="Date_of_book" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Start time -->
+      <div class="row">
+        <div class="col">
+          <div class="field">
+            <label class="label">Start Time</label>
+            <div class="control">
+              <input class="input" type="time" name="Start_Time" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Duration  -->
+      <div class="row">
+        <div class="field">
+          <label class="label">Duration</label>
+          <div class="control">
+            <input class="input" type="number" placeholder="In Hours" name="Duration"/>
+          </div>
+        </div>
+      </div>
+      <!-- Type of event -->
+      <div class="row">
+        <div class="field">
+          <label class="label">Type of Event</label>
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="Type" value="Casual" /> Casual Game
+            </label>
+            <label class="radio">
+              <input type="radio" name="Type" value="Training" /> Training session
+            </label>
+            <label class="radio">
+              <input type="radio" name="Type" value="Tournament" /> Tournament
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- Number of Players -->
+      <div class="row">
+          <div class="field">
+            <label class="label">Number of Players</label>
+            <div class="control">
+              <input class="input" type="number" id="quantity" min="1" max="22" placeholder="Number of Players" name="Number_of_players" />
+            </div>
+          </div>
+      </div>
+      <!-- Agree to Terms & condition -->
+      <div class="row">
+        <div class="field">
+          <label class="label">Agree to Terms & Conditions</label>
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="T_C" value="Yes" /> Yes
+            </label>
+            <label class="radio">
+              <input type="radio" name="T_C" value="No" /> No
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- Submit Button -->
+      <div class="row">
+        <div class="col">
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-primary" type="submit" id="submit-button">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div id="message" style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "></div>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", function (e) 
+    {
+      e.preventDefault(); // Prevent the default form submission
+      document.getElementById("message").textContent = "Submitting..";
+      document.getElementById("message").style.display = "block";
+      document.getElementById("submit-button").disabled = true;
+
+      // Collect the form data
+      var formData = new FormData(this);
+      var keyValuePairs = [];
+      for (var pair of formData.entries()) {
+        keyValuePairs.push(pair[0] + "=" + pair[1]);
+      }
+
+      var formDataString = keyValuePairs.join("&");
+
+      // Send a POST request to your Google Apps Script
+      fetch(
+        "https://script.google.com/macros/s/AKfycbyYAJsf756T1bfyeJMyuNhwig_YgznPVSM5reEfDO4r7Kcb9G7tnjg6Qi794mHtImxi/exec",
+        {
+          redirect: "follow",
+          method: "POST",
+          body: formDataString,
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+        }
+      )
+        .then(function (response) {
+          // Check if the request was successful
+          if (response) {
+            return response; // Assuming your script returns JSON response
+          } else {
+            throw new Error("Failed to submit the form.");
+          }
+        })
+        .then(function (data) {
+          // Display a success message
+          document.getElementById("message").textContent =
+            "Data submitted successfully!";
+          document.getElementById("message").style.display = "block";
+          document.getElementById("message").style.backgroundColor = "green";
+          document.getElementById("message").style.color = "beige";
+          document.getElementById("submit-button").disabled = false;
+          document.getElementById("form").reset();
+
+          setTimeout(function () {
+            document.getElementById("message").textContent = "";
+            document.getElementById("message").style.display = "none";
+          }, 2600);
+        })
+        .catch(function (error) {
+          // Handle errors, you can display an error message here
+          console.error(error);
+          document.getElementById("message").textContent =
+            "An error occurred while submitting the form.";
+          document.getElementById("message").style.display = "block";
+        });
+    });
+  </script>
+</body>
+
+</html>
